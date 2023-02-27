@@ -1,0 +1,15 @@
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: yellow;
+    width: 50%;
+}
+
+.nav-link-wrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+}
