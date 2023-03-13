@@ -1,30 +1,44 @@
 import React, { useState } from "react";
 
-const BookingForm = () => {
-  const [fName, setFName] = useState("");
-  const [lName, setLName] = useState("");
-  const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("");
+const BookingForm = (props) => {
+  const [date, setDate] = useState("");
+  const [people, setPeople] = useState(1);
+  const [occasions, setOccasions] = useState(["Birthday", "Anniversary"]);
+  // const [preferences, setPreferences] = useState("");
+  // const [comments, setComments] = useState("");
+
+  const { availableTimes } = props;
+
+  function handleDateChange(e) {
+    setDate(e.target.value);
+
+    let stringify = e.target.value;
+    const date = new Date(stringify);
+
+    props.updateTimes(date);
+  }
 
   return (
-    <form>
+    <form className="reservation-form">
       <label htmlFor="res-date">Choose date</label>
-      <input type="date" id="res-date" />
+      <input value={date} onChange={setDate} type="date" id="res-date" />
       <label htmlFor="res-time">Choose time</label>
       <select id="res-time">
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option>22:00</option>
+        {availableTimes.map((time) => (
+          <option key={time} value={time}>
+            {time}
+          </option>
+        ))}
       </select>
       <label htmlFor="guests">Number of guests</label>
       <input type="number" placeholder="1" min="1" max="10" id="guests" />
       <label htmlFor="occasion">Occasion</label>
-      <select id="occasion">
-        <option>Birthday</option>
-        <option>Anniversary</option>
+      <select id="occasion" value={occasions} onChange={setOccasions}>
+        {occasions.map((occasion) => (
+          <option key={occasion} value={occasion}>
+            {occasion}
+          </option>
+        ))}
       </select>
       <input type="submit" value="Make your reservation" />
     </form>
