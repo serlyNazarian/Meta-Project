@@ -1,6 +1,12 @@
 import React, { useReducer, useState } from "react";
 import BookingForm from "../BookingForm";
 
+const updateTimes = (date) => {
+  return date;
+};
+
+export { updateTimes };
+
 const BookingPage = () => {
   // const [availableTimes, setAvailableTimes] = useState([
   //   "17:00",
@@ -11,7 +17,10 @@ const BookingPage = () => {
   //   "22:00",
   // ]);
 
-  const updateTimes = () => {};
+  const currentDate = new Date();
+  console.log('currentDate :>> ', currentDate);
+  
+  const output = new Date();
 
   const [availableTimes, dispatch] = useReducer(updateTimes, output);
 

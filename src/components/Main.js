@@ -7,7 +7,7 @@ import Nav from "./Nav";
 
 const Main = () => {
   return (
-    <main>
+    <main data-testid="main">
       <Routes>
         <Route path="/" element={<Nav />}>
           <Route index element={<Homepage />} />
