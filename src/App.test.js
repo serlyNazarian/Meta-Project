@@ -33,7 +33,7 @@ test("output is a date object", () => {
 
   expect(output).toBeInstanceOf(Date);
   expect(output.getTime()).toBeCloseTo(new Date().getTime(), -2);
-})
+});
 
 test("updateTimes returns the input date", () => {
   const inputDate = new Date();

@@ -7,7 +7,7 @@ const BookingForm = (props) => {
   // const [preferences, setPreferences] = useState("");
   // const [comments, setComments] = useState("");
 
-  // const { availableTimes } = props;
+  const { availableTimes, submitForm } = props;
 
   // function handleDateChange(e) {
   //   setDate(e.target.value);
@@ -41,7 +41,11 @@ const BookingForm = (props) => {
           </option>
         ))}
       </select> */}
-      <input type="submit" value="Make your reservation" />
+      <input
+        type="submit"
+        value="Make your reservation"
+        onSubmit={submitForm}
+      />
     </form>
   );
 };

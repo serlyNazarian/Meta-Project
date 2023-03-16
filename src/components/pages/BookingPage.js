@@ -1,4 +1,6 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
+import { useNavigate } from "react-router-dom";
+import { submitAPI } from "../../bookingAPI";
 import BookingForm from "../BookingForm";
 
 const updateTimes = (date) => {
@@ -8,14 +10,13 @@ const updateTimes = (date) => {
 export { updateTimes };
 
 const BookingPage = () => {
-  // const [availableTimes, setAvailableTimes] = useState([
-  //   "17:00",
-  //   "18:00",
-  //   "19:00",
-  //   "20:00",
-  //   "21:00",
-  //   "22:00",
-  // ]);
+
+  const submitForm = async (formData) => {
+    const success = await submitAPI(formData);
+    if(success) {
+      useNavigate({pathname: '/src/components/pages/Confirmation.js'})
+    }
+  };
 
   const currentDate = new Date();
   console.log('currentDate :>> ', currentDate);
@@ -26,7 +27,7 @@ const BookingPage = () => {
 
   return (
     <>
-      <BookingForm availableTimes={availableTimes} updateTimes={dispatch} />
+      <BookingForm availableTimes={availableTimes} updateTimes={dispatch} submitForm={submitForm} />
     </>
   );
 };
