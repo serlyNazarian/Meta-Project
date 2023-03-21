@@ -3,31 +3,36 @@ import { useNavigate } from "react-router-dom";
 import { submitAPI } from "../../bookingAPI";
 import BookingForm from "../BookingForm";
 
-const updateTimes = (date) => {
-  return date;
-};
-
-export { updateTimes };
-
 const BookingPage = () => {
+  const navigate = useNavigate();
 
-  const submitForm = async (formData) => {
+  const SubmitForm = async (formData) => {
     const success = await submitAPI(formData);
-    if(success) {
-      useNavigate({pathname: '/src/components/pages/Confirmation.js'})
+    if (success) {
+      navigate({ pathname: "/src/components/pages/Confirmation.js" });
+    } else {
+      console.error();
     }
   };
 
+  const updateTimes = (date) => {
+    return date;
+  };
+
   const currentDate = new Date();
-  console.log('currentDate :>> ', currentDate);
-  
+  console.log("currentDate :>> ", currentDate);
+
   const output = new Date();
 
   const [availableTimes, dispatch] = useReducer(updateTimes, output);
 
   return (
     <>
-      <BookingForm availableTimes={availableTimes} updateTimes={dispatch} submitForm={submitForm} />
+      <BookingForm
+        availableTimes={availableTimes}
+        updateTimes={dispatch}
+        submitForm={SubmitForm}
+      />
     </>
   );
 };

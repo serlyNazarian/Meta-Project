@@ -35,13 +35,13 @@ test("output is a date object", () => {
   expect(output.getTime()).toBeCloseTo(new Date().getTime(), -2);
 });
 
-test("updateTimes returns the input date", () => {
-  const inputDate = new Date();
+// test("updateTimes returns the input date", () => {
+//   const inputDate = new Date();
 
-  const outputDate = updateTimes(inputDate);
+//   const outputDate = updateTimes(inputDate);
 
-  expect(outputDate).toEqual(inputDate);
-});
+//   expect(outputDate).toEqual(inputDate);
+// });
 
 it("renders the form without errors", () => {
   render(<BookingForm />);

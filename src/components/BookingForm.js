@@ -8,7 +8,7 @@ const BookingForm = (props) => {
   // const [comments, setComments] = useState("");
   const [isFormValid, setIsFormValid] = useState(false);
 
-  const { availableTimes, submitForm } = props;
+  const { availableTimes, submitForm, time } = props;
 
   // function handleDateChange(e) {
   //   setDate(e.target.value);
@@ -62,7 +62,10 @@ const BookingForm = (props) => {
         max="10"
         id="guests"
         value={guests}
-        onChange={e => {setGuests(e.target.value); handleInputChange();}}
+        onChange={(e) => {
+          setGuests(e.target.value);
+          handleInputChange();
+        }}
         required
       />
       <label htmlFor="occasion">Occasion</label>
