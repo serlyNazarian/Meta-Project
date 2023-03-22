@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import App from "./App";
 import BookingForm from "./components/BookingForm";
-import { updateTimes } from "./components/pages/BookingPage";
+// import { updateTimes } from "./components/pages/BookingPage";
 
 describe("App component", () => {
   test("renders header, main, and footer components", () => {
@@ -61,7 +61,7 @@ it("updates the number of guests input value when changed", () => {
   expect(guestsInput).toHaveValue("4");
 });
 
-it("updates the occasion input value wen changed", () => {
+it("updates the occasion input value when changed", () => {
   render(<BookingForm />);
   const occasionsInput = screen.getByLabelText("Occasion");
   fireEvent.change(occasionsInput, { target: { value: "Birthday" } });

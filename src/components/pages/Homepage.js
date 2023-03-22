@@ -1,7 +1,14 @@
 import React from "react";
+import CallToAction from "../CallToAction";
+import Specials from "../Specials";
 
 const Homepage = () => {
-  return <></>;
+  return (
+    <>
+      <CallToAction />
+      <Specials />
+    </>
+  );
 };
 
 export default Homepage;

@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { submitAPI } from "../../bookingAPI";
+import { fetchAPI, submitAPI } from "../../bookingAPI";
 import BookingForm from "../BookingForm";
 
 const BookingPage = () => {
@@ -16,13 +16,10 @@ const BookingPage = () => {
   };
 
   const updateTimes = (date) => {
-    return date;
+    return fetchAPI(date);
   };
 
-  const currentDate = new Date();
-  console.log("currentDate :>> ", currentDate);
-
-  const output = new Date();
+  const output = fetchAPI(new Date());
 
   const [availableTimes, dispatch] = useReducer(updateTimes, output);
 

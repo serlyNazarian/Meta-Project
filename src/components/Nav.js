@@ -10,22 +10,34 @@ const Nav = () => {
         <img className="nav-logo" src={Logo} alt="littleLemonLogo" />
         <ul className="nav-link-wrapper">
           <li>
-            <Link to={""}>Homeee</Link>
+            <Link className="nav-link" to={""}>
+              Home
+            </Link>
           </li>
           <li>
-            <a>About</a>
+            <Link className="nav-link" to={"/about"}>
+              About
+            </Link>
           </li>
           <li>
-            <a>Menu</a>
+            <Link className="nav-link" to={"/menu"}>
+              Menu
+            </Link>
           </li>
           <li>
-            <Link to={"/booking"}>Reservations</Link>
+            <Link className="nav-link" to={"/booking"}>
+              Reservations
+            </Link>
           </li>
           <li>
-            <a>Order Online</a>
+            <Link className="nav-link" to={"/orderonline"}>
+              Order Online
+            </Link>
           </li>
           <li>
-            <a>Login</a>
+            <Link className="nav-link" to={"/login"}>
+              Login
+            </Link>
           </li>
         </ul>
       </nav>
