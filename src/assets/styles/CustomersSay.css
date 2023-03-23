@@ -1,0 +1,40 @@
+.ratings-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #495e57;
+  margin-top: 100px;
+}
+
+.ratings-inner-wrapper {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.ratings-card {
+  background-color: #fff;
+  width: 330px;
+  height: 265px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.ratings-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.ratings-user-image {
+  width: 104px;
+  height: 118px;
+  border-radius: 16px;
+}
+
+.user-rating-profile {
+  margin-top: 50px;
+}

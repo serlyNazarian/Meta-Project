@@ -2,6 +2,7 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import Logo from "../assets/images/Logo .svg";
 import "../assets/styles/Nav.css";
+import Footer from "./Footer";
 
 const Nav = () => {
   return (
@@ -42,6 +43,7 @@ const Nav = () => {
         </ul>
       </nav>
       <Outlet />
+      <Footer />
     </>
   );
 };

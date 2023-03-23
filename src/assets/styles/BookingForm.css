@@ -1,0 +1,20 @@
+.reservation-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.booking-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+.booking-form-card {
+  background-color: #d9d9d9;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

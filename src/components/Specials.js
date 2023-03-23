@@ -4,6 +4,7 @@ import "../assets/styles/Specials.css";
 import greekSalad from "../assets/images/greek salad.jpg";
 import bruchetta from "../assets/images/bruchetta.svg";
 import lemonDesert from "../assets/images/lemon dessert.jpg";
+import deliveryIcon from "../assets/images/pngfind.com-delivery-truck-png-1359974.png";
 
 const Specials = () => {
   const specialsList = [
@@ -37,23 +38,35 @@ const Specials = () => {
             <h1>This weeks Specials</h1>
           </div>
           <div className="specials-title-right">
-            <Link to="">Online Menu</Link>
+            <Link className="specials-menu-link" to="">
+              Online Menu
+            </Link>
           </div>
         </div>
         <div className="specials-menu-wrapper">
           {specialsList.map((special) => (
             <div className="special-menu-wrapper" key={special.name}>
-              {/* <img src={special.image} /> */}
+              <img
+                className="special-image"
+                src={special.image}
+                alt="amazing food"
+              />
               <div className="special-menu-title">
                 <h4>{special.name}</h4>
-                <span>${special.price}</span>
+                <span className="special-price">${special.price}</span>
               </div>
               <div className="special-menu-description">
-                <p>{special.description}</p>
+                <p className="special-description">{special.description}</p>
               </div>
               <div className="special-delivery-section">
-                <Link to={""}>Order a delivery</Link>
-                {/* icon */}
+                <Link className="special-delivery-link" to={""}>
+                  Order a delivery
+                </Link>
+                <img
+                  className="delivery-icon"
+                  src={deliveryIcon}
+                  alt="delivery"
+                />
               </div>
             </div>
           ))}

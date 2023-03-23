@@ -1,12 +1,7 @@
 import React from "react";
-import CallToAction from "./CallToAction";
 
 const Main = () => {
-  return (
-    <main data-testid="main">
-      <CallToAction />
-    </main>
-  );
+  return <main data-testid="main"></main>;
 };
 
 export default Main;

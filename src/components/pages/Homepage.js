@@ -1,5 +1,7 @@
 import React from "react";
 import CallToAction from "../CallToAction";
+import Chicago from "../Chicago";
+import CustomersSay from "../CustomersSay";
 import Specials from "../Specials";
 
 const Homepage = () => {
@@ -7,6 +9,8 @@ const Homepage = () => {
     <>
       <CallToAction />
       <Specials />
+      <CustomersSay />
+      <Chicago />
     </>
   );
 };

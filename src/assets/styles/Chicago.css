@@ -1,0 +1,26 @@
+.chicago-wrapper {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.chicago-inner-wrapper {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.chicago-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.chicago-image {
+  width: 350px;
+  height: 400px;
+  border-radius: 16px;
+  margin: 10px;
+}
